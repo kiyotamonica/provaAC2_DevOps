@@ -1,9 +1,12 @@
 package com.ead_gamificada.entity;
 
+import com.ead_gamificada.vo.Custo;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Embedded;
 
 @Entity
 public class Curso {
@@ -13,7 +16,10 @@ public class Curso {
     private Long id;
 
     private String nome;
-    private Double custo;
+    
+    @Embedded
+    private Custo custo;
+    
     private String emenda;
 
     // Getters e Setters
@@ -33,11 +39,11 @@ public class Curso {
         this.nome = nome;
     }
 
-    public Double getCusto() {
+    public Custo getCusto() {
         return custo;
     }
 
-    public void setCusto(Double custo) {
+    public void setCusto(Custo custo) {
         this.custo = custo;
     }
 

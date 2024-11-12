@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
+import com.ead_gamificada.vo.Email;
+
 import jakarta.persistence.Embedded;
 
 @Entity
@@ -14,7 +17,9 @@ public class Aluno {
     private Long id;
     
     private String nome;
-    private String email;
+    
+    @Embedded
+    private Email email;
 
     // Getters e Setters
     public Long getId() {
@@ -33,11 +38,11 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public String getEmail() {
+    public Email getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(Email email) {
         this.email = email;
     }
 }

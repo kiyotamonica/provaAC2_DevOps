@@ -1,4 +1,7 @@
 package com.ead_gamificada.entity;
+import com.ead_gamificada.vo.Pagamento;
+
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +20,8 @@ public class CursoComprado {
     @JoinColumn(name = "aluno_id")
     private Aluno aluno;
 
-    private Double pagamento;
+    @Embedded
+    private Pagamento pagamento;
 
     @ManyToOne
     @JoinColumn(name = "curso_id")
@@ -40,11 +44,11 @@ public class CursoComprado {
         this.aluno = aluno;
     }
 
-    public Double getPagamento() {
+    public Pagamento getPagamento() {
         return pagamento;
     }
 
-    public void setPagamento(Double pagamento) {
+    public void setPagamento(Pagamento pagamento) {
         this.pagamento = pagamento;
     }
 
