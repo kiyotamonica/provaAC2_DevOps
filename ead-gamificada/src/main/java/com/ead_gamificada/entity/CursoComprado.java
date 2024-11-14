@@ -1,5 +1,4 @@
 package com.ead_gamificada.entity;
-import com.ead_gamificada.vo.Pagamento;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;

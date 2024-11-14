@@ -5,8 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import com.ead_gamificada.vo.Email;
-
 import jakarta.persistence.Embedded;
 
 @Entity

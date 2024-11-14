@@ -1,7 +1,5 @@
 package com.ead_gamificada.entity;
 
-import com.ead_gamificada.vo.Custo;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
