@@ -10,12 +10,12 @@ services:
       - db-volume:/var/lib/postgresql/data
 
   api:
-    image: ead-gamificada:latest
+    image: monicakiyota/ead-gamificada:1.0
     networks:
       - default  # Certifique-se de que está usando a rede adequada
     environment:
       DB_HOST: database
     ports:
-      - "8686:8080"
+      - "8686:8585"
 volumes:
   db-volume:
